@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <title>광주 홈페이지 빌더 추천 | 블로그</title>
+    <meta name="description" content="퇴근길에 광주 홈페이지 빌더 고민하시는 분들 많으시죠? 회사원 입장에서 본 솔직한 추천과 후기입니다. 010-6279-0862">
+    <meta name="keywords" content="광주 홈페이지 빌더, 블로그, 추천, 후기, 010-6279-0862">
+    <link rel="canonical" href="https://kr-pbn-bp-013.pages.dev">
+    <meta property="og:title" content="광주 홈페이지 빌더 추천 | 블로그">
+    <meta property="og:description" content="퇴근길에 광주 홈페이지 빌더 고민하시는 분들 많으시죠? 회사원 입장에서 본 솔직한 추천과 후기입니다.">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="ko_KR">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #e0e0e0;
+            --accent-color: #00ff9d;
+            --secondary-color: #ff0055;
+            --border-color: #333;
+            --font-main: 'Courier New', Courier, monospace;
+            --font-heading: 'Arial Black', sans-serif;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Header & Nav */
+        .header {
+            border-bottom: 2px solid var(--accent-color);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: var(--bg-color);
+            z-index: 1000;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        .nav ul {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        .nav a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        .nav-toggle { display: none; cursor: pointer; font-size: 1.5rem; color: var(--accent-color); }
+
+        /* Main Content */
+        .main { padding: 60px 0; }
+        .hero {
+            text-align: center;
+            margin-bottom: 60px;
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            background: #111;
+        }
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--text-color);
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        /* Blog Content */
+        .blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .blog-post h2 {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+        }
+        .blog-post p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .highlight-box {
+            background: #1a1a1a;
+            border: 1px dashed var(--accent-color);
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .cta-box {
+            background: var(--secondary-color);
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .cta-box a {
+            text-decoration: underline;
+            color: #fff;
+        }
+
+        /* Review Section (Reused Pattern) */
+        .review {
+            margin-top: 80px;
+            border-top: 2px solid var(--border-color);
+            padding-top: 40px;
+        }
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .review-card {
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            background: #111;
+            transition: transform 0.2s;
+        }
+        .review-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+        .review-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+        }
+
+        /* Footer */
+        .footer {
+            border-top: 2px solid var(--accent-color);
+            padding: 40px 0;
+            margin-top: 80px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .footer p { margin-bottom: 10px; }
+        .contact-link {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--bg-color);
+                border-bottom: 1px solid var(--accent-color);
+                padding: 20px;
+            }
+            .nav ul.active { display: flex; }
+            .nav-toggle { display: block; }
+            .hero h1 { font-size: 2rem; }
+            .blog-post h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">BP//BUILDERS</a>
+                <div class="nav-toggle" onclick="document.querySelector('.nav ul').classList.toggle('active')">☰</div>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/blog" style="color:var(--secondary-color)">Blog</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="hero">
+                <h1>광주 홈페이지 빌더<br>솔직한 후기</h1>
+                <p>회사원 김대리, 퇴근길에 쓴 글입니다.</p>
+            </section>
+
+            <article class="blog-post">
+                <p>안녕하세요. 광주에서 평범하게 출퇴근하는 직장인입니다. 요즘 회사에서 홈페이지 리뉴얼 프로젝트를 맡게 됐는데, 머리가 지끈지끈하네요. 개발자 채용하자니 예산이 부족하고, 외주 맡기자니 어디가 좋은지 모르겠고...</p>
+                
+                <p>그래서 혼자서 '광주 홈페이지 빌더'라고 검색을 엄청 해봤습니다. 솔직히 처음엔 '빌더'라는 말 자체가 좀 생소했거든요. 코딩 몰라도 된다는 거? 정말일까? 하는 의심부터 들었습니다.</p>
+
+                <h2>1. 진짜 코딩 몰라도 되나요?</h2>
+                <p>네, 됩니다. 제가 직접 만져본 strumento 들은 대부분 드래그 앤 드롭 방식이었어요. 파워포인트 PPT 만들듯이 이미지 넣고, 텍스트 넣고, 버튼 배치하면 끝입니다. 다만, 디자인 감각이 조금 필요하긴 해요.不然 (안이면) 그냥 색감 괴물이 탄생할 수 있습니다.</p>
+
+                <h2>2. 광주 지역 업체를 고른 이유</h2>
+                <p>인터넷이 발달했으니 서울이든 제주든 상관없겠지만, 저는 역시 '面对面' (면대면) 미팅이 편하더라고요. 광주에서 만나서 커피 한잔 하면서 "여기 로고 좀 키워주세요", "이 색상 좀 바꿔주세요" 할 수 있는 게 마음은 훨씬 편합니다. 통화로 설명하다가 빡치는 일 없잖아요.</p>
+
+                <div class="highlight-box">
+                    <strong>💡 팁:</strong> 무조건 싼 곳 찾지 마세요. 유지보수가 안 되면 나중에 더 돈듭니다. A/S 가능한 광주 로컬 업체 찾는 게 정신건강에 좋습니다.
+                </div>
+
+                <h2>3. 제가 추천하는 방향</h2>
+                <p>저처럼 비전공자라면, 너무 복잡한 기능 빼고 '반응형' 잘 되는 심플한 템플릿 고르세요. 모바일에서 깨지면 고객 다 날아갑니다. 그리고最重要的是 (가장 중요한 것은) SEO(검색 최적화) 가 기본으로 되어 있는지 확인하세요. 만들어놓고 검색에 안 뜨면 무슨 소용입니까.</p>
+
+                <p>결론적으로, 저는 광주에서 업력 좀 되고 포트폴리오 확실한 곳에 맡기려고 합니다. 여기저기 알아본 결과, 010-6279-0862 로 문의해보시는 것도 나쁘지 않을 것 같아요. 저랑 비슷한 고민 하시는 분들에게 추천드립니다.</p>
+
+                <div class="cta-box">
+                    <p>아직도 고민 중이신가요?</p>
+                    <p>편하게 전화주세요. friendly 하게 상담해 드립니다.</p>
+                    <a href="tel:010-6279-0862" class="contact-link">010-6279-0862</a>
+                </div>
+            </article>
+
+            <section class="review">
+                <h2 style="font-family: var(--font-heading); color: var(--text-color);">고객들의 생생한 반응</h2>
+                <div class="review-grid">
+                    <div class="review-card">
+                        <h3>광주 수제버거집 사장님</h3>
+                        <p>"메뉴판 사진 바꾸려고 매번業者 (업체) 부르기 싫었는데, 빌더 쓰니까 제가 직접 수정하니까 너무 편해요. 광주 로컬 업체라 통화도 잘 되고."</p>
+                    </div>
+                    <div class="review-card">
+                        <h3>서구 원장님</h3>
+                        <p>"환자 예약 시스템 연동이 필요했는데, 기술적인 부분을 다 해결해 주셔서 감사했습니다. 디자인도 세련되고."</p>
+                    </div>
+                    <div class="review-card">
+                        <h3>스타트업 대표</h3>
+                        <p>"예산 적었는데 퀄리티는 대기업 수준으로 나왔습니다. 광주 홈페이지 빌더 찾으신다면 여기 추천합니다."</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 광주 홈페이지 빌더 추천. All rights reserved.</p>
+            <p>Design System: Brutalist Avantgarde // Theme: KR Neon Void</p>
+            <a href="tel:010-6279-0862" class="contact-link">010-6279-0862</a>
+        </div>
+    </footer>
+
+</body>
+</html>
